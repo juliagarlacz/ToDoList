@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"
+/>
+</head>
+<body>
+    <div class="display">
+        <div class="tittleAdd">        
+            <h1>To do list</h1>
+            <button id="click"><i class="fas fa-plus"></i></button>
+        </div>
+        <div class="main">
+            <div class="toDoBoard">
+             <div class="to-do">
+                 <div class="tittle">
+                     <i class="far fa-circle"></i>
+                     <p id="toDoP">To-do</p>
+                 </div>
+                 <div class="tasks" ></div>
+             </div>
+             <div class="in-progress">
+                 <div class="tittle">
+                     <i class="fas fa-play-circle"></i>
+                     <p id="inprogressP">In progress</p>
+                 </div>
+                 <div class="tasks"></div>
+             </div>
+               
+             <div class="compelete">
+                 <div class="tittle">
+                     <i class="fas fa-check-circle"></i>
+                     <p id="completeP">Complete</p>
+                 </div>
+                 <div class="tasks"></div>
+             
+             </div>
+
+            </div>
+            
+        </div>
+
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content"  data-simplebar data-simplebar-auto-hide="false">
+            <div class="taskContainer">
+                <div class="line">
+                    <h2 id="textLineHead">Nowe zadanie</h2>
+                    <button id="closeModal"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="newTask">
+                    <div class="containerTask">
+                        <div class="newTaskLine">
+                            <form>
+                                <input type="text" id="newTask" placeholder="Task">
+                                <select id="status" name="status">
+                                    <option value="low">Low</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="high">High</option>
+                                </select>
+                                <button id="addTaskBtn"><i class="fas fa-plus"></i></button>
+                                <button id="changeTaskBtn"><i class="fas fa-pen"></i></button>
+                            </form>
+                        </div>
+                        <textarea id="text" rows="10" cols="30"></textarea>
+                        <div class="progress">
+                            <button id="To-doStatus" data-status="to-do">To-do</button>
+                            <button id="In-progressStatus" data-status="in-progress"="">In progress</button>
+                            <button id="completeStatus" data-status="complete">Complete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="https://kit.fontawesome.com/8ed383a6dd.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>

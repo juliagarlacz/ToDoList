@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+}
+
+.display{
+    height: 100vh;
+    width: 100%;
+    display: block;
+    background-image: radial-gradient(circle at 20.12% 114.09%, #a5ded5 0, #a2deda 3.33%, #a1dedf 6.67%, #a0dde4 10%, #a1dde9 13.33%, #a3dced 16.67%, #a5dbf0 20%, #a9daf3 23.33%, #aed9f6 26.67%, #b3d7f7 30%, #b9d6f8 33.33%, #c0d4f8 36.67%, #c6d2f8 40%, #cdd0f7 43.33%, #d4cff5 46.67%, #dacdf2 50%, #e0cbef 53.33%, #e6caeb 56.67%, #ebc9e7 60%, #efc7e2 63.33%, #f3c7dd 66.67%, #f6c6d8 70%, #f8c6d3 73.33%, #fac6ce 76.67%, #fbc6c9 80%, #fbc6c4 83.33%, #fac7bf 86.67%, #f8c8bb 90%, #f6c9b7 93.33%, #f3cbb4 96.67%, #f0ccb1 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.main{
+    /* background-color: rgba(255, 255, 255, 0.381); */
+    height: 80vh;
+    width: 70%;
+    border-radius: 10px;
+    
+}
+
+.toDoBoard{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-between;
+}
+
+
+
+#click, #addTaskBtn{
+    background: none;
+    height: 20px;
+    width: 20px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border: 1.5px black solid;
+    border-radius: 50%;
+    color: white;
+    line-height: 10px;
+    background-color: black;
+}
+
+.tittleAdd{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tittle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px;
+    justify-content: center;
+}
+
+.to-do, .in-progress, .compelete{
+    height: 100%;
+    width: 100%;
+}
+
+#completeP, #inprogressP, #toDoP{
+    margin-left: 5px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 60%;
+    height: 70%;
+    max-width: 800px;
+    max-height: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow: auto;
+    display: flex; /* Dodaj flexbox do kontenera */
+    flex-direction: column; /* Ustaw kierunek flexa na kolumnę */
+    justify-content: center; /* Wyśrodkuj zawartość w pionie */
+}
+
+#closeModal {
+    background: none;
+    height: 20px;
+    width: 20px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border: 2px black solid;
+    border-radius: 50%;
+    color: black;
+    line-height: 10px;
+}
+
+.line {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.newTask {
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.newTaskLine {
+    display: flex;
+}
+
+.containerTask {
+    flex: 1; /* Rozciągnij zawartość w pionie */
+}
+
+form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#newTask {
+    border-radius: 3px;
+    border: 1px solid black;
+    padding: 9px;
+    color: black;
+    width: 45%; /* Adjust the width to fit both inputs side by side */
+
+}
+
+#status {
+    border-radius: 3px;
+    border: 1px solid black;
+    padding: 8px;
+    color: black;
+    width: 45%; /* Adjust the width to fit both inputs side by side */
+
+}
+
+textarea {
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid black;
+    padding: 10px;
+    color: black;
+    resize: vertical; /* Allow vertical resizing of the textarea */
+}
+
+.newTaskLine{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.task-card {
+    background-color: rgba(255, 255, 255, 0.466);
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 3px;
+    padding: 5px;
+    font-size: 10px;
+    height: 100%;
+}
+
+.task-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.emoji{
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.mainTask{
+    display: flex;
+    flex-direction: column;
+}
+
+#changeTaskBtn{
+    display: none;
+    background: none;
+    height: 20px;
+    width: 20px;
+    font-size: 10px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border: 1.5px black solid;
+    border-radius: 50%;
+    color: white;
+    line-height: 10px;
+    background-color: black;
+}
+
+.progress{
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content:space-evenly
+}
+
+#To-doStatus, #In-progressStatus, #completeStatus {
+    border: 1px solid black;
+    height: 45px;
+    width: 150px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    background-color: white;
+    color: black;
+}
